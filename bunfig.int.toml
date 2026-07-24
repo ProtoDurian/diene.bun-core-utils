@@ -1,0 +1,19 @@
+[test]
+root = "tests/integration"
+timeout = 120000
+coverageReporter = ["text", "lcov"]
+coverageDir = "coverage/int"
+coverageSkipTestFiles = true
+# Integration ledger = explicit-root filesystem helpers only.
+coveragePathIgnorePatterns = [
+  "src/concurrency.ts",
+  "src/fuzzy.ts",
+  "src/hash.ts",
+  "src/index.ts",
+  "src/record.ts",
+  "src/slug.ts",
+  "src/timing.ts",
+  "src/unique.ts",
+  "src/wire-date.ts",
+  "tests/**",
+]
